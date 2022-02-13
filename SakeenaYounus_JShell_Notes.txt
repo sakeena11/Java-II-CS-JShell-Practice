@@ -1,0 +1,159 @@
+Last login: Fri Jan 14 13:49:14 on ttys000
+sakeenayounus@Sakeenas-MacBook-Pro ~ % jshell
+|  Welcome to JShell -- Version 17.0.1
+|  For an introduction type: /help intro
+
+jshell> num = 5;
+|  Error:
+|  cannot find symbol
+|    symbol:   variable num
+|  num = 5;
+|  ^-^
+
+jshell> int num;
+num ==> 0
+
+jshell> num = 5;
+num ==> 5
+
+jshell> double num2 = 3.14;
+num2 ==> 3.14
+
+jshell> float num3 = 2.71F;
+num3 ==> 2.71
+
+jshell> float num3- = 2.71;
+|  Error:
+|  ';' expected
+|  float num3- = 2.71;
+|            ^
+
+jshell> float num3 = 2.71;
+|  Error:
+|  incompatible types: possible lossy conversion from double to float
+|  float num3 = 2.71;
+|               ^--^
+
+jshell> double num3 = 2.71;
+num3 ==> 2.71
+
+jshell> 5.0 + 4 
+$6 ==> 9.0
+
+jshell> double x = 5.0 + 4;
+x ==> 9.0
+
+jshell> float y = 5.0 + 4;
+|  Error:
+|  incompatible types: possible lossy conversion from double to float
+|  float y = 5.0 + 4;
+|            ^-----^
+
+jshell> float y = 5.0 + 4F;
+|  Error:
+|  incompatible types: possible lossy conversion from double to float
+|  float y = 5.0 + 4F;
+|            ^------^
+
+jshell> float y = 5.0F + 4F;
+y ==> 9.0
+
+jshell> float x = (float) (5.0 + 4);
+x ==> 9.0
+
+jshell> double sampleDouble = 5.0;
+sampleDouble ==> 5.0
+
+jshell> int sampleInt = 4;
+sampleInt ==> 4
+
+jshell> sampleDouble + sampleInt;
+$12 ==> 9.0
+
+jshell> x = sampleDouble + sampleInt;
+|  Error:
+|  incompatible types: possible lossy conversion from double to float
+|  x = sampleDouble + sampleInt;
+|      ^----------------------^
+
+jshell> x = sampleInt + (float) sampleDouble;
+x ==> 9.0
+
+jshell> //conversion of a char to an int and vice versa
+
+jshell> //declare a string, boolean, and a char
+
+jshell> char myCharacter = ')';
+myCharacter ==> ')'
+
+jshell> (int) myCharacter;
+$15 ==> 41
+
+jshell> myCharacter;
+myCharacter ==> ')'
+
+jshell> 'Q' + ')';
+$17 ==> 122
+
+jshell> (char) 8743;
+$18 ==> '∧'
+
+jshell> (int) '^';
+$19 ==> 94
+
+jshell> (char) 631;
+$20 ==> 'ɷ'
+
+jshell> (char) 432;
+$21 ==> 'ư'
+
+jshell> boolean t = true;
+t ==> true
+
+jshell> boolean f = false;
+f ==> false
+
+jshell> t+f;
+|  Error:
+|  bad operand types for binary operator '+'
+|    first type:  boolean
+|    second type: boolean
+|  t+f;
+|  ^-^
+
+jshell> (int) t;
+|  Error:
+|  incompatible types: boolean cannot be converted to int
+|  (int) t;
+|        ^
+
+jshell> String s = "This is a string!";
+s ==> "This is a string!"
+
+jshell> (int) s;
+|  Error:
+|  incompatible types: java.lang.String cannot be converted to int
+|  (int) s;
+|        ^
+
+jshell> (String) t;
+|  Error:
+|  incompatible types: boolean cannot be converted to java.lang.String
+|  (String) t;
+|           ^
+
+jshell> // strings are the most generic
+
+jshell> // casting is not the way to go. instead we will do something magical--we will use a method
+
+jshell> //what is a method?
+
+jshell> //what is a class and an object?
+
+jshell> (boolean) 0;
+|  Error:
+|  incompatible types: int cannot be converted to boolean
+|  (boolean) 0;
+|            ^
+
+jshell> 
